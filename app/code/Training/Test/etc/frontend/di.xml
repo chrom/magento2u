@@ -20,4 +20,9 @@
         </argument>
     </arguments>
     </type>
+    <type name="Magento\Catalog\Controller\Product\View">
+        <plugin sortOrder="10"
+                name="product-view-controller-plugin"
+                type="Training\Test\Plugin\Controller\Product\ViewPlugin"/>
+    </type>
 </config>
