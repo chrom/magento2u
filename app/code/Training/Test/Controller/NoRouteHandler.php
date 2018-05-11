@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: andreyzabara
- * Date: 5/4/18
- * Time: 00:20
- */
 
 namespace Training\Test\Controller;
-
 
 class NoRouteHandler implements \Magento\Framework\App\Router\NoRouteHandlerInterface
 {
@@ -20,7 +13,5 @@ class NoRouteHandler implements \Magento\Framework\App\Router\NoRouteHandlerInte
             ->setModuleName($moduleName)
             ->setControllerName($controllerName)
             ->setActionName($actionName);
-
-        return true;
     }
 }
