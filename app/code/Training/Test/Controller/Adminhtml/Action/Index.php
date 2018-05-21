@@ -2,14 +2,13 @@
 
 namespace Training\Test\Controller\Adminhtml\Action;
 
+use Magento\Framework\Controller\ResultFactory;
+
 class Index extends \Magento\Backend\App\Action
 {
     public function execute()
     {
         $this->getResponse()->appendBody("HELLO WORLD");
-        $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-        $resultPage->appendBody("HELLO WORLD");
-        return $resultPage;
     }
 
     /**
@@ -17,7 +16,6 @@ class Index extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return true;
         $secret = $this->getRequest()->getParam('secret');
         return isset($secret) && (int)$secret == 1;
     }

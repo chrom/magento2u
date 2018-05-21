@@ -12,7 +12,7 @@ class ViewPlugin
      */
     public function afterExecute(View $subject, $result)
     {
-        echo "AFTER";
+//        echo "AFTER";
         return $result;
     }
 
@@ -21,7 +21,7 @@ class ViewPlugin
      */
     public function beforeExecute(View $subject)
     {
-        echo "BEFORE<BR>";
+//        echo "BEFORE<BR>";
         return $subject;
     }
 }
